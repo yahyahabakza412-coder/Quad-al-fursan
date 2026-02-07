@@ -2,72 +2,201 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Qaed Al Fursan - The Essence of Leadership</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qaed Al Fursan | Official Shop</title>
     <style>
+        :root {
+            --gold: #c5a059;
+            --black: #0a0a0a;
+            --dark-grey: #1a1a1a;
+            --white: #ffffff;
+        }
+
         body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--black);
+            color: var(--white);
             margin: 0;
             padding: 0;
-            background: #0a0a0a; /* Tiefschwarz */
-            color: #c5a059; /* Edles Gold */
-            font-family: 'Playfair Display', serif;
+        }
+
+        /* Navigation */
+        nav {
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: rgba(0,0,0,0.9);
+            border-bottom: 1px solid var(--gold);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .cart-icon {
+            cursor: pointer;
+            position: relative;
+        }
+
+        .cart-count {
+            background: var(--gold);
+            color: black;
+            border-radius: 50%;
+            padding: 2px 7px;
+            font-size: 0.8rem;
+            position: absolute;
+            top: -10px;
+            right: -15px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* Platzhalter für Parfüm-Hintergrund */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-        .container {
             text-align: center;
-            border: 1px solid #c5a059;
-            padding: 50px;
-            background: rgba(20, 20, 20, 0.8);
-            box-shadow: 0 0 30px rgba(197, 160, 89, 0.2);
-            border-radius: 2px;
         }
-        h1 {
-            font-size: 3.5rem;
-            letter-spacing: 8px;
-            margin-bottom: 10px;
+
+        .hero h1 {
+            font-size: 4rem;
+            color: var(--gold);
+            margin: 0;
             text-transform: uppercase;
         }
-        .subtitle {
+
+        /* Shop Section */
+        .shop-container {
+            padding: 50px 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--dark-grey);
+            border: 1px solid #333;
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+
+        .product-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: #222; /* Platzhalter für Produktbild */
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #444;
+            font-weight: bold;
+        }
+
+        .product-title {
             font-size: 1.2rem;
-            letter-spacing: 3px;
-            font-style: italic;
-            opacity: 0.8;
+            margin: 10px 0;
+            color: var(--gold);
         }
-        .divider {
-            height: 2px;
-            width: 80px;
-            background: #c5a059;
-            margin: 30px auto;
+
+        .price {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            display: block;
         }
-        .button {
-            border: 1px solid #c5a059;
-            padding: 12px 30px;
-            background: transparent;
-            color: #c5a059;
+
+        .btn-add {
+            background: var(--gold);
+            color: black;
+            border: none;
+            padding: 12px 25px;
+            font-weight: bold;
             text-transform: uppercase;
             cursor: pointer;
-            transition: 0.4s;
-            text-decoration: none;
+            width: 100%;
+            transition: 0.3s;
         }
-        .button:hover {
-            background: #c5a059;
-            color: black;
+
+        .btn-add:hover {
+            background: #e6bc6a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+            color: #666;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Qaed Al Fursan</h1>
-        <div class="subtitle">Anführer der Ritter</div>
-        <div class="divider"></div>
-        <p>Ein Duft von unvergleichlicher Stärke und Eleganz.</p>
-        <br><br>
-        <a href="#" class="button">Entdecken</a>
+    <nav>
+        <div class="logo">Qaed Al Fursan</div>
+        <div class="cart-icon">
+            🛒 Warenkorb <span class="cart-count">0</span>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Exclusive Collection</h1>
+        <p>Entdecke die Welt der orientalischen Düfte</p>
+    </section>
+
+    <div class="shop-container">
+        <div class="product-card">
+            <div class="product-image">PRODUKT BILD</div>
+            <div class="product-title">Qaed Al Fursan (Black)</div>
+            <span class="price">34,90 €</span>
+            <button class="btn-add" onclick="addToCart()">In den Warenkorb</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">PRODUKT BILD</div>
+            <div class="product-title">Qaed Al Fursan Unlimited (White)</div>
+            <span class="price">39,90 €</span>
+            <button class="btn-add" onclick="addToCart()">In den Warenkorb</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">PRODUKT BILD</div>
+            <div class="product-title">Lattafa Luxury Set</div>
+            <span class="price">89,00 €</span>
+            <button class="btn-add" onclick="addToCart()">In den Warenkorb</button>
+        </div>
     </div>
+
+    <footer>
+        &copy; 2026 Qaed Al Fursan Online Shop. Alle Rechte vorbehalten.
+    </footer>
+
+    <script>
+        let count = 0;
+        function addToCart() {
+            count++;
+            document.querySelector('.cart-count').innerText = count;
+            alert('Artikel zum Warenkorb hinzugefügt!');
+        }
+    </script>
 
 </body>
 </html>
